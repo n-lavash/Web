@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TaskTracker.BLL.Interfaces\TaskTracker.BLL.Interfaces.csproj" />
+    <ProjectReference Include="..\TaskTracker.BLL\TaskTracker.BLL.csproj" />
+    <ProjectReference Include="..\TaskTracker.DAL.Interfaces\TaskTracker.DAL.Interfaces.csproj" />
+    <ProjectReference Include="..\TaskTracker.DAL\TaskTracker.DAL.csproj" />
+  </ItemGroup>
+
+</Project>
