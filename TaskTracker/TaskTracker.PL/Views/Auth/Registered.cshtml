@@ -1,0 +1,48 @@
+﻿@model Tuple<TaskTracker.WebApiPL.Models.UserModel, TaskTracker.WebApiPL.Models.AccountModel>
+
+<h1>Registered</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Registered">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Item1.Name" class="control-label">Name</label>
+                <input asp-for="Item1.Name" class="form-control" />
+                <span asp-validation-for="Item1.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Item1.PhoneNumber" class="control-label">Phone number</label>
+                <input asp-for="Item1.PhoneNumber" class="form-control" />
+                <span asp-validation-for="Item1.PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Item2.Login" class="control-label">Login</label>
+                <input asp-for="Item2.Login" class="form-control" />
+                <span asp-validation-for="Item2.Login" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Item2.Password" class="control-label">Password</label>
+                <input asp-for="Item2.Password" class="form-control" />
+                <span asp-validation-for="Item2.Password" class="text-danger"></span>
+            </div>
+            <div>
+                Не можете придумать пароль? Воспользуйтесь нашим ботом! Он сгенирирует вам его!
+                <a href="https://t.me/give_you_password_pupsik_bot">Тык</a>
+            </div>
+            <div class="form-group" style="margin-top:50px">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Login">I already have an accountt</a>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
